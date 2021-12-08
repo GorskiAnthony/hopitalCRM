@@ -16,7 +16,7 @@ class App
         if (!empty($_GET['task'])) {
             $task = $_GET['task'];
         }
-        $controllerName = '\Controller\\' . $controller;
+        $controllerName = '\Controller\\' . ucfirst($controller);
         $controller = new $controllerName();
         $controller->$task();
     }
