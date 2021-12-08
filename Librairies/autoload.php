@@ -2,6 +2,6 @@
 
 spl_autoload_register(function ($class) {
     $class = str_replace('\\', '/', $class);
-    //echo "<pre>$class</pre>";
+    var_dump($class);
     require_once "$class.php";
 });
